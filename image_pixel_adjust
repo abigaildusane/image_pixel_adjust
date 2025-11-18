@@ -1,0 +1,12 @@
+from PIL import Image
+
+img = Image.open("x.png")
+
+pixels = img.load()
+
+r, g, b = pixels[0, 0]
+
+pixels[0, 0] = (255, g, b)
+
+img.save("output.png")
+img.show()
